@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let set = new Set();
+        for(let i = 0; i < 10; i++){
+            let map = new Map();
+            map.set("empNo", i + 1);
+            map.set("empName", String.fromCharCode(65 + i).repeat(3));
+            map.set("empSalary", 5000 + Math.floor((Math.random()*5000)));
+            set.add(map);
+        }
+        
+
+        var a=Array.from(set)
+        console.log(a)
+
+        /*
+            编写函数fn, 实现
+                let result = fn(set);
+
+                返回值result是一个排好序的数组对象，排序依据是按数组元素（元素为Object类型)的empSalary由低到高。
+        */
+        function fn(set){
+            for(var j of set){
+                console.log(j)
+            }
+        }
+        console.log(fn(set))
+
+
+        
+        let brr = [1, 6, 3, 2];
+        brr.sort(function (a, b) {
+            console.log(a-b);
+            return a - b;
+        });
+    </script>
+</body>
+</html>

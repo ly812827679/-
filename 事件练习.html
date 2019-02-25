@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{margin: 0px;padding: 0px;}
+    .add{
+        width: 200px;
+        height:auto;
+        margin:0 auto;
+    }
+    .tex{
+        display: inline-block;
+        width: 200px; height: 50px;line-height:50px;text-align: center;
+        background-color:chocolate;
+    }
+    .box{
+        width: 200px;height:200px;
+        background-color:aqua;
+        display: none;
+
+    }
+    .show{
+        display:block;
+    }
+</style>
+<body>
+    
+    <div class="add">
+        <h3 class="tex">嘿嘿嘿</h3>
+        <div class="box"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="add">
+            <h3 class="tex">嘿嘿嘿</h3>
+            <div class="box"></div>
+        </div>
+    <script src="lib/jquery.js"></script>
+        <script>
+
+            /* $(".tex").bind("click",function(){
+                $(this).next(".box").toggleClass("show")
+            }); */
+            /* $(".tex").click(function() {
+                 $(this).next(".box").toggleClass("show");
+             }); */
+
+           /* $(".add").hover(
+               function(){
+            $(this).children(".box").addClass("show")
+               },function(){
+            $(this).children(".box").removeClass("show")
+               }
+           ) */
+           
+        /* $(".add").mouseover(function(){
+            $(this).children(".box").addClass("show")
+        }).mouseout(function(){
+            $(this).children(".box").removeClass("show")
+        }) */
+        </script>
+</body>
+</html>

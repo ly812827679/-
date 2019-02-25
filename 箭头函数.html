@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            箭头函数
+            a1函数名，箭头左边的X是输入参数，右边的是返回值
+        */
+        //如果只有一个参数的话，括号可以省略
+        let a1 = x => x
+        console.log(a1(5))
+
+
+        //如果有两个参数，逗号隔开括号不能省略
+        let a2 = (x, y) => x * y
+        console.log(a2(3, 9))
+
+
+        //如果无参，括号不能省略
+        let a3 = () => "hello"
+        console.log(a3())
+
+
+        //如果没有返回值，需要在执行语句前加void
+        let a4 = (x, y) => void console.log(x * y)//用void来标识此函数没有返回值
+        a4(5, 10)
+
+
+        //如果函数体内有多条语句，需要用{}包裹
+        let a5 = (msg, x, y) => {
+            console.log(msg);
+            console.log(x, y);
+        };
+        a5("hi", 20, 30)
+
+
+        //如果函数体内有多条语句并且有返回值，则必须加return
+        let a6 = (msg, x, y) => {
+            console.log(msg);
+            console.log(x, y);
+            return x * y;
+        };
+        console.log(a6("hello", 30, 40));
+
+
+        //如果函数体返回了一个对象的时候，不能单独用{}包裹对象，要在外层套一个()
+        let a7 = (x, y) => ({ name: x, age: y });
+        console.log(a7("小红", 18));
+
+
+        //当箭头函数有默认值时
+        let a8 = (x = 10, y = 20) => x + y
+        console.log(a8(30));
+
+
+        //箭头函数的rest参数
+        let a9 = (x, ...p) => {
+            let arr = []
+            p.forEach(function (e) {
+                arr.push(e * e)
+            })
+            return arr;
+        }
+        console.log(a9("小红", 2, 4, 6, 8))
+    </script>
+</body>
+
+</html>
