@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .red{color: crimson}
+    .blue{color: aqua}
+</style>
+<body>
+    <ul id="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script src="lib/jquery.js"></script>
+    <script>
+
+        $("#box li").click(function(){
+            // $(this).addClass("red").siblings().removeClass()
+            $(this).next().addClass('red');
+            $(this).prev().addClass('blue');
+        });
+    </script>
+</body>
+</html>
